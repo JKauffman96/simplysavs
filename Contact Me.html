@@ -116,7 +116,7 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="About Us.html">About</a></li>
                         <li><a href="Services.html">Services</a></li>
-                        <li><a href="Contact Me.html">Contact Me</a></li>
+                        <li><a href="Contact Me.html">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -131,65 +131,6 @@
         </div>
     </footer>
 
-    <script>
-        // Initialize EmailJS
-        emailjs.init('GdLF-HEnPPUxu9-wp');
-
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const submitBtn = form.querySelector('.submit-btn');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnLoading = submitBtn.querySelector('.btn-loading');
-            const successMessage = document.getElementById('success-message');
-            const errorMessage = document.getElementById('error-message');
-            
-            // Show loading state
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'inline';
-            submitBtn.disabled = true;
-            
-            // Hide previous messages
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-            
-            // Get form data
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                phone: form.phone.value,
-                subject: form.subject.value,
-                message: form.message.value
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('service_oprs9kp', 'template_ii6rqhg', formData)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    
-                    // Show success message
-                    successMessage.style.display = 'block';
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // Reset form
-                    form.reset();
-                    
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    
-                    // Show error message
-                    errorMessage.style.display = 'block';
-                    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                })
-                .finally(function() {
-                    // Reset button state
-                    btnText.style.display = 'inline';
-                    btnLoading.style.display = 'none';
-                    submitBtn.disabled = false;
-                });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
