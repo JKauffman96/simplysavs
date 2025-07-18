@@ -22,9 +22,9 @@
             </nav>
             <a href="Contact Me.html" class="ask-button">Ask Me!</a>
         </div>
-         </header>
+    </header>
 
-         <main class="main">
+    <main class="main">
         <section class="hero">
             <div class="container">
                 <img src="Profile Pic.jpg" class="profile-pic">
@@ -36,47 +36,57 @@
                 <a href="https://twitter.com/yourusername">Twitter</a>
             </div>
         </section>
- 
-        
-        <div class="success-message" id="successMessage">
-            ✅ Thank you! Your message has been sent successfully.
-        </div>
-        
-        <div class="error-message" id="errorMessage">
-            ❌ Sorry, there was an error sending your message. Please try again.
-        </div>
-        
-        <h2>Contact Me</h2>
-        <form id="contactForm">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-            </div>
-            
-            <button type="submit" id="submitBtn">Send Email</button>
-        </form>
-    </div>
 
+        <section class="contact-section">
+            <div class="success-message" id="successMessage">
+                ✅ Thank you! Your message has been sent successfully.
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+                ❌ Sorry, there was an error sending your message. Please try again.
+            </div>
+            
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" id="submitBtn">Send Email</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <img src="LOGO.jpg" alt="Simply Sav's Logo" class="Logo">
+            <p>&copy; 2025 Simply Sav's Apothecary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs/3.2.0/email.min.js"></script>
+    
     <script>
         // Initialize EmailJS
         (function() {
-            emailjs.init('GdLF-HEnPPUxu9-wp'); // Replace with your EmailJS public key
+            emailjs.init('GdLF-HEnPPUxu9-wp'); // Your EmailJS public key
         })();
 
         // Form submission handler
@@ -127,12 +137,4 @@
         });
     </script>
 </body>
-
-    <footer class="footer">
-        <div class="container">
-            <img src="LOGO.jpg" alt="Simply Sav's Logo" class="Logo">
-             <p>&copy; 2025 Simply Sav's Apothecary. All rights reserved.</p>
-        </div>
-    </footer>
-
-    </html>
+</html>
