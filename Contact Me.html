@@ -3,56 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - Simply Sav's Apothecary</title>
+    <title>Simply Sav's Apothecary</title>
     <link rel="stylesheet" href="Savsstyle.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <meta name="description" content="Holistic Skincare Products">
+    <meta name="keywords" content="Skincare, Beef Tallow, Holistic, Natural Ingredients">
+    <meta name="author" content="Savannah Smith">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <header>
+    <header class="header">
         <div class="container">
-            <div class="logo">
-                <h1>Simply Sav's Apothecary</h1>
-                <p>Natural Wellness & Herbal Remedies</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About Us.html">About</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="Contact Me.html" class="active">Contact</a></li>
-                </ul>
+            <h1 class="logo">Simply Sav's Apothecary</h1>
+            <nav class="navigation">
+                <a href="index.html">Home</a>
+                <a href="My Story.html">My Story</a>
+                <a href="Products.html">Products</a>
+                <a href="Contact Me.html">Contact Me</a>
             </nav>
+            <a href="Contact Me.html" class="ask-button">Ask Me!</a>
         </div>
     </header>
 
-    <main>
-        <section class="contact-section">
+    <main class="main">
+        <section class="hero">
             <div class="container">
-                <h2>Contact Me</h2>
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h3>Get in Touch</h3>
-                        <p>Ready to start your wellness journey? I'd love to hear from you! Whether you have questions about my services, need personalized recommendations, or want to schedule a consultation, don't hesitate to reach out.</p>
-                        
-                        <div class="contact-details">
-                            <div class="contact-item">
-                                <h4>Email</h4>
-                                <p>simplysavsapothecary@gmail.com</p>
-                            </div>
-                            <div class="contact-item">
-                                <h4>Phone</h4>
-                                <p>(555) 123-4567</p>
-                            </div>
-                            <div class="contact-item">
-                                <h4>Location</h4>
-                                <p>Serving the Greater Metro Area</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form">
-                        <h3>Send Me a Message</h3>
-                        <form id="contactForm">
+                <img src="Profile Pic.jpg" class="profile-pic">
+                <p>Contact me</p>
+                <p>Email: XXXXXX@att.net</p>
+                <p>Phone: xxx-xxx-xxxx</p>
+                <a href="https://instagram.com/simply.savs_apothecary">Instagram</a>
+                <a href="https://facebook.com/yourpage">Facebook</a>
+                <a href="https://twitter.com/yourusername">Twitter</a>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Send me a Message!</h2>
+            <form id="contactForm">
                             <div class="form-group">
                                 <label for="name">Name *</label>
                                 <input type="text" id="name" name="name" required>
@@ -84,13 +72,12 @@
                                 <textarea id="message" name="message" rows="5" required placeholder="Tell me about your wellness goals or any questions you have..."></textarea>
                             </div>
                             
-                            <button type="submit" class="submit-btn">
+                            <button type="submit" class="submitBtn">
                                 <span class="btn-text">Send Message</span>
-                                <span class="btn-loading" style="display: none;">Sending...</span>
+                                <span class="btn-loading">Sending...</span>
                             </button>
                         </form>
-                        
-                        <div id="success-message" class="message success-message" style="display: none;">
+          <div id="success-message" class="message success-message">
                             <p>Thank you for your message! I'll get back to you within 24 hours.</p>
                         </div>
                         
@@ -103,93 +90,11 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Simply Sav's Apothecary</h3>
-                    <p>Your trusted partner in natural wellness and herbal healing.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="About Us.html">About</a></li>
-                        <li><a href="Services.html">Services</a></li>
-                        <li><a href="Contact Me.html">Contact Me</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <p>Email: simplysavsapothecary@gmail.com</p>
-                    <p>Phone: (555) 123-4567</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Simply Sav's Apothecary. All rights reserved.</p>
-            </div>
+            <img src="LOGO.jpg" alt="Simply Sav's Logo" class="Logo">
+            <p>&copy; 2025 Simply Sav's Apothecary. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Initialize EmailJS
-        emailjs.init('GdLF-HEnPPUxu9-wp');
-
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const submitBtn = form.querySelector('.submit-btn');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const btnLoading = submitBtn.querySelector('.btn-loading');
-            const successMessage = document.getElementById('success-message');
-            const errorMessage = document.getElementById('error-message');
-            
-            // Show loading state
-            btnText.style.display = 'none';
-            btnLoading.style.display = 'inline';
-            submitBtn.disabled = true;
-            
-            // Hide previous messages
-            successMessage.style.display = 'none';
-            errorMessage.style.display = 'none';
-            
-            // Get form data
-            const formData = {
-                name: form.name.value,
-                email: form.email.value,
-                phone: form.phone.value,
-                subject: form.subject.value,
-                message: form.message.value
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('service_oprs9kp', 'template_ii6rqhg', formData)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    
-                    // Show success message
-                    successMessage.style.display = 'block';
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // Reset form
-                    form.reset();
-                    
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    
-                    // Show error message
-                    errorMessage.style.display = 'block';
-                    errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                })
-                .finally(function() {
-                    // Reset button state
-                    btnText.style.display = 'inline';
-                    btnLoading.style.display = 'none';
-                    submitBtn.disabled = false;
-                });
-        });
-    </script>
 </body>
 </html>
