@@ -508,6 +508,31 @@ button:hover, .submitBtn:hover {
     filter: brightness(1.2);
 }
 
+.nav-footer {
+    margin: 4rem 0;
+        text-align: left;
+    margin-left: 200px;
+    color: #000000;
+}
+
+.nav-footer a{
+color: #ffffff;
+
+}
+.pl-0, .px-0 {
+    padding-left: 0 !important;
+}
+.pr-0, .px-0 {
+    padding-right: 0 !important;
+}
+.flex-column {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
+    flex-direction: column !important;
+
+}
+
 /* ENHANCED MOBILE RESPONSIVE DESIGN */
 
 /* Large tablets and small laptops */
