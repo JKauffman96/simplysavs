@@ -7,8 +7,8 @@
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
-            const submitBtn = contactForm.querySelector('.submit-btn');
-            const btnText = submitBtn.querySelector('.btn-text');
+            let submitBtn = contactForm.querySelector('.submit-btn');
+            let btnText = submitBtn.querySelector('.btn-text');
             
             const successMessage = document.getElementById('success-message');
             const errorMessage = document.getElementById('error-message');
