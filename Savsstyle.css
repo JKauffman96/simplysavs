@@ -559,12 +559,12 @@ button:hover, .submitBtn:hover {
     .nav-footer {
         gap: 1rem;
         flex-direction: column;
-        align-items: left;
+        align-items: center;
     }
     
     .nav-footer .nav-item {
         width: 100%;
-        text-align: left;
+        text-align: center;
     }
     
     .nav-footer .nav-item a {
@@ -611,7 +611,6 @@ button:hover, .submitBtn:hover {
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
-
 /* ENHANCED MOBILE RESPONSIVE DESIGN */
 
 /* Large tablets and small laptops */
