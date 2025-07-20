@@ -475,7 +475,9 @@ button:hover, .submitBtn:hover {
 }
 
 
-/* Enhanced Footer */
+/* Add this to your Savsstyle.css file - Footer Navigation Fixes */
+
+/* Enhanced Footer - Updated with proper navigation styling */
 .footer {
     background: linear-gradient(135deg, #4D4F3A 0%, #3A3B2D 100%);
     color: white;
@@ -508,18 +510,107 @@ button:hover, .submitBtn:hover {
     filter: brightness(1.2);
 }
 
+/* Footer Navigation Styles */
+.nav-footer-container,
 .nav-footer {
-    margin: 4rem 0;
-        text-align: left;
-    margin-left: 200px;
-    color: #000000;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
 }
 
-.nav-footer a{
-color: #ffffff;
-
+.nav-footer {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
 }
 
+.nav-footer .nav-item {
+    display: inline-block;
+}
+
+.nav-footer .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.nav-footer .nav-item a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    color: #9E9076;
+}
+
+/* Mobile Responsive Footer Navigation */
+@media (max-width: 768px) {
+    .footer {
+        padding: 2rem 0;
+    }
+    
+    .nav-footer {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-footer .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-footer .nav-item a {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+    
+    .footer .Logo {
+        max-width: 120px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .nav-footer .nav-item a {
+        font-size: 0.85rem;
+        padding: 0.6rem 0.8rem;
+        max-width: 180px;
+    }
+    
+    .footer .Logo {
+        max-width: 100px;
+    }
+    
+    .footer .container {
+        gap: 1rem;
+    }
+}
+
+/* Fix for flex-column class if it exists */
+.flex-column {
+    flex-direction: column !important;
+}
+
+/* Remove any conflicting px-0 class */
+.px-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 
 /* ENHANCED MOBILE RESPONSIVE DESIGN */
 
@@ -792,7 +883,12 @@ color: #ffffff;
     .footer .Logo {
         max-width: 120px;
     }
+    
+   
+
+
 }
+
 
 /* Extra small mobile devices */
 @media (max-width: 320px) {
