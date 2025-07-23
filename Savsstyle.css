@@ -13,6 +13,265 @@ body {
     background-color: #fefefe;
 }
 
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            padding: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Navigation Container */
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo/Brand Area */
+        .nav-brand {
+            height: 70px;
+            width: 70px;
+            padding: 15px 20px;
+            color: #9E9076;
+            font-weight: bold;
+            font-size: 18px;
+            align-items: left;
+        }
+
+        /* Mobile Menu Toggle - Always visible on mobile */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #9E9076;
+            font-size: 24px;
+            padding: 15px 20px;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* Navigation List */
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Navigation Items */
+        .nav-item {
+            position: relative;
+        }
+
+        /* Navigation Links */
+        .nav-link {
+            display: block;
+            color: #9E9076;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #555;
+        }
+
+        /* Dropdown Arrow */
+        .nav-link.has-dropdown::after {
+            content: ' ▼';
+            font-size: 12px;
+            margin-left: 5px;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 200px;
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        /* Show dropdown on hover (desktop only) */
+        @media (min-width: 769px) {
+            .nav-item:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+        }
+
+        /* Dropdown Links */
+        .dropdown-menu .nav-link {
+            padding: 12px 20px;
+            border-bottom: 1px solid #555;
+            color:#9E9076;
+        }
+
+        .dropdown-menu .nav-link:hover {
+            background-color: #666;
+            color: white;
+        }
+
+        .dropdown-menu .nav-item:last-child .nav-link {
+            border-bottom: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            /* Show hamburger button */
+            .mobile-toggle {
+                display: block;
+            }
+
+            /* Hide brand on mobile if needed */
+            .nav-brand {
+                display: none;
+            }
+
+            /* Mobile menu styling */
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: #333;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-top: 60px;
+                transition: left 0.3s ease;
+                overflow-y: auto;
+                z-index: 1000;
+            }
+
+            /* Show mobile menu when active */
+            .nav-menu.active {
+                left: 0;
+            }
+
+            /* Mobile menu overlay */
+            .nav-menu.active::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 280px;
+                width: calc(100vw - 280px);
+                height: 100vh;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: -1;
+            }
+
+            /* Mobile navigation items */
+            .nav-item {
+                width: 100%;
+                border-bottom: 1px solid #555;
+            }
+
+            .nav-item:last-child {
+                border-bottom: none;
+            }
+
+            /* Mobile dropdown menu */
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                background-color: #555;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease;
+                width: 100%;
+            }
+
+            /* Show mobile dropdown when active */
+            .nav-item.dropdown-active .dropdown-menu {
+                max-height: 300px;
+            }
+
+            /* Mobile dropdown links */
+            .dropdown-menu .nav-link {
+                padding-left: 40px;
+                border-bottom: 1px solid #666;
+            }
+
+            /* Rotate arrow when dropdown is active */
+            .nav-item.dropdown-active .nav-link.has-dropdown::after {
+                transform: rotate(180deg);
+                display: inline-block;
+            }
+        }
+
+        /* Demo Content */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .content ul {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+
+        .content li {
+            margin-bottom: 5px;
+            color: #666;
+        
+        }
+
+        /* Demo Content */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .content h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            line-height: 1.6;
+            color: #666;
+        }
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
